@@ -110,12 +110,13 @@ const (
 
 	// other
 	//
-	InverterState        Identifier = 0x5F33284E // uint8
-	BatteryCapacityAh    Identifier = 0xB57B59BD // float32
-	BatteryTemperatureC  Identifier = 0x902AFAFB // float32
-	BatterySoCTarget     Identifier = 0x8B9FF008 // float32 0 ... 1
-	BatterySoCTargetHigh Identifier = 0xB84A38AB // float32 0 ... 1
-	BatteryBatStatus     Identifier = 0x70A2AF4F // int32
+	InverterState          Identifier = 0x5F33284E // uint8
+	BatteryCapacityAh      Identifier = 0xB57B59BD // float32
+	BatteryTemperatureC    Identifier = 0x902AFAFB // float32
+	BatterySoCTarget       Identifier = 0x8B9FF008 // float32 0 ... 1
+	BatterySoCTargetHigh   Identifier = 0xB84A38AB // float32 0 ... 1
+	BatteryBatStatus       Identifier = 0x70A2AF4F // int32
+	BatteryPlaceholder0Soc Identifier = 0x8B4BE168 // float32
 )
 
 // Table to convert identifier values to human-readable strings
@@ -170,12 +171,13 @@ var identifiersToString = map[Identifier]string{
 
 	// other
 	//
-	InverterState:        "Inverter state",
-	BatteryCapacityAh:    "Battery capacity [Ah]",
-	BatteryTemperatureC:  "Battery temperature [°C]",
-	BatterySoCTarget:     "Battery SOC target",
-	BatterySoCTargetHigh: "Battery SOC target high",
-	BatteryBatStatus:     "Battery status",
+	InverterState:          "Inverter state",
+	BatteryCapacityAh:      "Battery capacity [Ah]",
+	BatteryTemperatureC:    "Battery temperature [°C]",
+	BatterySoCTarget:       "Battery SOC target",
+	BatterySoCTargetHigh:   "Battery SOC target high",
+	BatteryBatStatus:       "Battery status",
+	BatteryPlaceholder0Soc: "Battery Placeholer 0 Soc",
 }
 
 // Converts an identifier to a human-readable representation
