@@ -74,9 +74,10 @@ const (
 
 	// voltage
 	//
-	SolarGenAVoltage Identifier = 0xB298395D // float32
-	SolarGenBVoltage Identifier = 0x5BB8075A // float32
-	BatteryVoltage   Identifier = 0xA7FA5C5D // float32
+	SolarGenAVoltage           Identifier = 0xB298395D // float32
+	SolarGenBVoltage           Identifier = 0x5BB8075A // float32
+	BatteryVoltage             Identifier = 0xA7FA5C5D // float32
+	BatteryPlaceholder0Voltage Identifier = 0xFCA1CBB5 // float32
 
 	// energy
 	//
@@ -104,19 +105,27 @@ const (
 	PowerMngUseGridPowerEnable  Identifier = 0x36A9E9A6 // bool
 
 	// buf_v_control
+	//
 	BufVControlPowerReductionMaxSolar     Identifier = 0x4BC0F974 // float32
 	BufVControlPowerReductionMaxSolarGrid Identifier = 0xF473BC5E // float32
 	BufVControlPowerReduction             Identifier = 0xFE1AA500 // float32 0 ... 1
 
+	// battery
+	//
+	BatteryTemperatureC        Identifier = 0x902AFAFB // float32
+	BatterySoCTarget           Identifier = 0x8B9FF008 // float32 0 ... 1
+	BatterySoCTargetHigh       Identifier = 0xB84A38AB // float32 0 ... 1
+	BatteryBatStatus           Identifier = 0x70A2AF4F // int32
+	BatteryStatus2             Identifier = 0xDE3D20D  // int32
+	BatteryPlaceholder0Soc     Identifier = 0x8B4BE168 // float32
+	PowerMngNBatteries         Identifier = 0x663F1452 // uint8
+	BatteryCurrent             Identifier = 0x21961B58 // float32
+	BatteryPlaceholder0Current Identifier = 0x79D7D617 // float32
+	BatteryCapacityAh          Identifier = 0xB57B59BD // float32
+
 	// other
 	//
-	InverterState          Identifier = 0x5F33284E // uint8
-	BatteryCapacityAh      Identifier = 0xB57B59BD // float32
-	BatteryTemperatureC    Identifier = 0x902AFAFB // float32
-	BatterySoCTarget       Identifier = 0x8B9FF008 // float32 0 ... 1
-	BatterySoCTargetHigh   Identifier = 0xB84A38AB // float32 0 ... 1
-	BatteryBatStatus       Identifier = 0x70A2AF4F // int32
-	BatteryPlaceholder0Soc Identifier = 0x8B4BE168 // float32
+	InverterState Identifier = 0x5F33284E // uint8
 )
 
 // Table to convert identifier values to human-readable strings
@@ -134,9 +143,10 @@ var identifiersToString = map[Identifier]string{
 
 	// voltage
 	//
-	SolarGenAVoltage: "Solar generator A voltage [V]",
-	SolarGenBVoltage: "Solar generator B voltage [V]",
-	BatteryVoltage:   "Battery voltage [V]",
+	SolarGenAVoltage:           "Solar generator A voltage [V]",
+	SolarGenBVoltage:           "Solar generator B voltage [V]",
+	BatteryVoltage:             "Battery voltage [V]",
+	BatteryPlaceholder0Voltage: "Second Battery voltage [V]",
 
 	// energy
 	//
@@ -169,15 +179,22 @@ var identifiersToString = map[Identifier]string{
 	BufVControlPowerReductionMaxSolarGrid: "Max. allowed grid feed-in power",
 	BufVControlPowerReduction:             "External power reduction based on solar plant peak power ",
 
+	// battery
+	//
+	BatteryTemperatureC:        "Battery temperature [°C]",
+	BatterySoCTarget:           "Battery SOC target",
+	BatterySoCTargetHigh:       "Battery SOC target high",
+	BatteryBatStatus:           "Battery status for first battery",
+	BatteryStatus2:             "Battery status for both batteries",
+	BatteryPlaceholder0Soc:     "Battery Placeholer 0 Soc",
+	PowerMngNBatteries:         "Number of batteries connected to inverter",
+	BatteryCurrent:             "Battery Current [I]",
+	BatteryPlaceholder0Current: "Second Battery Current [I]",
+	BatteryCapacityAh:          "Battery capacity [Ah]",
+
 	// other
 	//
-	InverterState:          "Inverter state",
-	BatteryCapacityAh:      "Battery capacity [Ah]",
-	BatteryTemperatureC:    "Battery temperature [°C]",
-	BatterySoCTarget:       "Battery SOC target",
-	BatterySoCTargetHigh:   "Battery SOC target high",
-	BatteryBatStatus:       "Battery status",
-	BatteryPlaceholder0Soc: "Battery Placeholer 0 Soc",
+	InverterState: "Inverter state",
 }
 
 // Converts an identifier to a human-readable representation
