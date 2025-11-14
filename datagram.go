@@ -72,6 +72,11 @@ const (
 	BatterySoC       Identifier = 0x959930BF // float32, range 0 ... 1
 	S0ExternalPowerW Identifier = 0xE96F1844 // float32
 
+	// current
+	//
+	BatteryCurrent             Identifier = 0x21961B58 // float32
+	BatteryPlaceholder0Current Identifier = 0x79D7D617 // float32
+
 	// voltage
 	//
 	SolarGenAVoltage           Identifier = 0xB298395D // float32
@@ -112,16 +117,14 @@ const (
 
 	// battery
 	//
-	BatteryTemperatureC        Identifier = 0x902AFAFB // float32
-	BatterySoCTarget           Identifier = 0x8B9FF008 // float32 0 ... 1
-	BatterySoCTargetHigh       Identifier = 0xB84A38AB // float32 0 ... 1
-	BatteryBatStatus           Identifier = 0x70A2AF4F // int32
-	BatteryStatus2             Identifier = 0xDE3D20D  // int32
-	BatteryPlaceholder0Soc     Identifier = 0x8B4BE168 // float32
-	PowerMngNBatteries         Identifier = 0x663F1452 // uint8
-	BatteryCurrent             Identifier = 0x21961B58 // float32
-	BatteryPlaceholder0Current Identifier = 0x79D7D617 // float32
-	BatteryCapacityAh          Identifier = 0xB57B59BD // float32
+	BatteryTemperatureC    Identifier = 0x902AFAFB // float32
+	BatterySoCTarget       Identifier = 0x8B9FF008 // float32 0 ... 1
+	BatterySoCTargetHigh   Identifier = 0xB84A38AB // float32 0 ... 1
+	BatteryBatStatus       Identifier = 0x70A2AF4F // int32
+	BatteryStatus2         Identifier = 0xDE3D20D  // int32
+	BatteryPlaceholder0Soc Identifier = 0x8B4BE168 // float32
+	PowerMngNBatteries     Identifier = 0x663F1452 // uint8
+	BatteryCapacityAh      Identifier = 0xB57B59BD // float32
 
 	// other
 	//
@@ -140,6 +143,11 @@ var identifiersToString = map[Identifier]string{
 	TotalGridPowerW:  "Total grid power [W]",
 	BatterySoC:       "Battery state of charge",
 	S0ExternalPowerW: "S0 external power [W]",
+
+	// current
+	//
+	BatteryCurrent:             "Battery Current [I]",
+	BatteryPlaceholder0Current: "Second Battery Current [I]",
 
 	// voltage
 	//
@@ -181,16 +189,14 @@ var identifiersToString = map[Identifier]string{
 
 	// battery
 	//
-	BatteryTemperatureC:        "Battery temperature [°C]",
-	BatterySoCTarget:           "Battery SOC target",
-	BatterySoCTargetHigh:       "Battery SOC target high",
-	BatteryBatStatus:           "Battery status for first battery",
-	BatteryStatus2:             "Battery status for both batteries",
-	BatteryPlaceholder0Soc:     "Battery Placeholer 0 Soc",
-	PowerMngNBatteries:         "Number of batteries connected to inverter",
-	BatteryCurrent:             "Battery Current [I]",
-	BatteryPlaceholder0Current: "Second Battery Current [I]",
-	BatteryCapacityAh:          "Battery capacity [Ah]",
+	BatteryTemperatureC:    "Battery temperature [°C]",
+	BatterySoCTarget:       "Battery SOC target",
+	BatterySoCTargetHigh:   "Battery SOC target high",
+	BatteryBatStatus:       "Battery status for first battery",
+	BatteryStatus2:         "Battery status for both batteries",
+	BatteryPlaceholder0Soc: "Battery Placeholer 0 Soc",
+	PowerMngNBatteries:     "Number of batteries connected to inverter",
+	BatteryCapacityAh:      "Battery capacity [Ah]",
 
 	// other
 	//
