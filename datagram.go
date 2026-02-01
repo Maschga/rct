@@ -89,6 +89,9 @@ const (
 	SolarGenBVoltage           Identifier = 0x5BB8075A // float32
 	BatteryVoltage             Identifier = 0xA7FA5C5D // float32
 	BatteryPlaceholder0Voltage Identifier = 0xFCA1CBB5 // float32
+	GSyncULRms0                Identifier = 0xCF053085 // AC voltage phase 1
+	GSyncULRms1                Identifier = 0x54B4684E // AC voltage phase 2
+	GSyncULRms2                Identifier = 0x2545E22D // AC voltage phase 3
 
 	// energy
 	//
