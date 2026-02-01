@@ -71,6 +71,9 @@ const (
 	TotalGridPowerW  Identifier = 0x91617C58 // float32, positive = taken from grid, negative = feed into grid
 	BatterySoC       Identifier = 0x959930BF // float32, range 0 ... 1
 	S0ExternalPowerW Identifier = 0xE96F1844 // float32
+	GSyncPAcLp0      Identifier = 0x71E10B51 // float32, AC power phase 1
+	GSyncPAcLp1      Identifier = 0x6E1C5B78 // float32, AC power phase 2
+	GSyncPAcLp2      Identifier = 0xB9928C51 // float32, AC power phase 3
 
 	// current
 	//
@@ -79,9 +82,6 @@ const (
 	GSyncIDrEff0               Identifier = 0x89EE3EB5 // float32, current phase 1
 	GSyncIDrEff1               Identifier = 0x650C1ED7 // float32, current phase 2
 	GSyncIDrEff2               Identifier = 0x92BC682B // float32, current phase 3
-	GSyncIDrLp0                Identifier = 0x887D43C4 // float32, current phase 1 (average)
-	GSyncIDrLp1                Identifier = 0xDCAC0EA9 // float32, current phase 2 (average)
-	GSyncIDrLp2                Identifier = 0x48D73FA5 // float32, current phase 3 (average)
 
 	// voltage
 	//
