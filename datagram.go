@@ -76,6 +76,9 @@ const (
 	//
 	BatteryCurrent             Identifier = 0x21961B58 // float32
 	BatteryPlaceholder0Current Identifier = 0x79D7D617 // float32
+	GSyncIDrEff0               Identifier = 0x89EE3EB5 // float32, current phase 1
+	GSyncIDrEff1               Identifier = 0x650C1ED7 // float32, current phase 2
+	GSyncIDrEff2               Identifier = 0x92BC682B // float32, current phase 3
 
 	// voltage
 	//
