@@ -79,6 +79,9 @@ const (
 	GSyncIDrEff0               Identifier = 0x89EE3EB5 // float32, current phase 1
 	GSyncIDrEff1               Identifier = 0x650C1ED7 // float32, current phase 2
 	GSyncIDrEff2               Identifier = 0x92BC682B // float32, current phase 3
+	GSyncIDrLp0                Identifier = 0x887D43C4 // float32, current phase 1 (average)
+	GSyncIDrLp1                Identifier = 0xDCAC0EA9 // float32, current phase 2 (average)
+	GSyncIDrLp2                Identifier = 0x48D73FA5 // float32, current phase 3 (average)
 
 	// voltage
 	//
